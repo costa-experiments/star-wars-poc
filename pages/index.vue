@@ -1,5 +1,6 @@
-<template>
-  <Tutorial />
+<template lang="pug">
+  main
+    h1 Here!
 </template>
 
 <script>
