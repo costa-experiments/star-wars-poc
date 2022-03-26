@@ -8,3 +8,8 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style lang="styl" scoped>
+h1
+  color red
+</style>
