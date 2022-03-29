@@ -57,6 +57,7 @@ export default {
     },
     manifest: {
       name: 'Star Wars POC',
+      short_name: 'SW POC',
       description: 'A little poc using SWAPI and Nuxt.',
       lang: 'en',
     },
