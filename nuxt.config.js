@@ -24,18 +24,16 @@ export default {
   plugins: [],
 
   components: {
-    dirs: [
-      '~/components/core',
-      '~/components/ui',
-      '~/components/page',
-    ],
+    dirs: ['~/components/core', '~/components/page'],
   },
 
-  buildModules: ['@nuxtjs/eslint-module'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/pwa'],
 
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios'],
 
-  axios: {},
+  axios: {
+    baseURL: 'https://swapi.dev/api',
+  },
 
   router: {
     routes: [
@@ -53,8 +51,18 @@ export default {
   },
 
   pwa: {
+    meta: {
+      title: 'Star Wars POC',
+      author: 'Diego Costa',
+    },
     manifest: {
+      name: 'Star Wars POC',
+      description: 'A little poc using SWAPI and Nuxt.',
       lang: 'en',
+    },
+    icon: {
+      fileName: 'favicon.png',
+      sizes: [64, 120, 144, 152, 192, 384, 512],
     },
   },
 
