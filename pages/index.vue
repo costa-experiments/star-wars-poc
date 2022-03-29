@@ -40,14 +40,14 @@ export default {
 
     searchCharacters(searchText) {
       setTimeout(async () => {
-        const { data } = await this.$axios.get(`https://swapi.dev/api/people?search=${encodeURIComponent(searchText)}`);
+        const { data } = await this.$axios.get(`/people?search=${encodeURIComponent(searchText)}`);
 
         this.swapi = data;
       }, 500);
     },
 
     async getCharactersPage(page = 1) {
-      const { data } = await this.$axios.get(`https://swapi.dev/api/people?page=${page}`);
+      const { data } = await this.$axios.get(`/people?page=${page}`);
 
       this.page = page;
       this.swapi = { ...data };

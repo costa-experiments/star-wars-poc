@@ -46,7 +46,7 @@ export default {
 
   methods: {
     async getCharacterData(id) {
-      const { data } = await this.$axios.get(`https://swapi.dev/api/people/${id}`);
+      const { data } = await this.$axios.get(`/people/${id}`);
 
       const films = await this.getFilms(data);
 
